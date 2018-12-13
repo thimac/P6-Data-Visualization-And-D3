@@ -1,9 +1,10 @@
+//This code was based on:
 //http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922
 //https://bl.ocks.org/wboykinm/dbbe50d1023f90d4e241712395c27fb3
 
-function drawChart(data){
+function drawChart(data, chart){
 	//Width and height of map
-	var width = 960;
+	var width =  960;
 	var height = 500;
 
 	// D3 Projection
@@ -15,32 +16,51 @@ function drawChart(data){
 	var path = d3.geo.path()               // path generator that will convert GeoJSON to SVG paths
 		   .projection(projection);  // tell path generator to use albersUsa projection
 
-	
-	var minVal = 52;
-	var maxVal = 14717;
+	// Legend variables
+	var minVal = chart == "#chart1" ? 52 : 0;
+	var maxVal = chart == "#chart1" ? 14717 : 2500; 
 	var lowColor = '#afc7ed';
 	var highColor = '#000000';
 
-	// if the Borrower State is the same from GeoJSON, return de frequency to 
+	//if the Borrower State is the same from GeoJSON, return de frequency
 	function getFreq(state) {
 		for (var j = 0; j < data.length; j++)  {
-			if (state == convertRegion(data[j].BorrowerState)) {		
+			if (state == convertRegion(data[j].BorrowerState))
 				return data[j].freq;
-			}
 		}
+		return 0;
+	}
+	
+	//return the percent
+	function getPerc(state) {
+		for (var j = 0; j < data.length; j++)  {
+			if (state == convertRegion(data[j].BorrowerState))
+				return ((data[j].freq/data[j].pop)*100).toFixed(2);
+		}
+		return 0;
+	}
+
+	//return population
+	function getPop(state) {
+		for (var j = 0; j < data.length; j++)  {
+			if (state == convertRegion(data[j].BorrowerState))
+				return data[j].pop;
+		}
+		return 0;
 	}
 
 	// linear scale for the colors
 	var color = d3.scaleLinear().domain([minVal,maxVal]).range([lowColor, highColor]);
 
 	//Create SVG element and append map to the SVG
-	var svg = d3.select("body")
+	var svg = d3.select(chart)
 			.append("svg")
 			.attr("width", width)
 			.attr("height", height);
+
 		
 	// Append Div for tooltip to SVG
-	var div = d3.select("body")
+	var div = d3.select(chart)
 			.append("div")   
 	    		.attr("class", "tooltip")               
 	    		.style("opacity", 0);
@@ -60,13 +80,26 @@ function drawChart(data){
 		.style("fill", function(d) {
 			return color(getFreq(d.properties.NAME));
 		})
-		.on("mouseover", function(d) {		
-		    div.transition()		
-		        .duration(200)		
-		        .style("opacity", .9);		
-		    div.html(d.properties.NAME + "<br/>" + "Loans:" + getFreq(d.properties.NAME))	
-		        .style("left", (d3.event.pageX) + "px")		
-		        .style("top", (d3.event.pageY - 28) + "px");	
+		.on("mouseover", function(d) {
+			if (chart == "#chart1") {		
+			    div.transition()	
+				.duration(200)
+				.style("opacity", .9);		
+			    div.html("<b>" + d.properties.NAME + "</b>" + "<br/>" + "População:" + 
+				getPop(d.properties.NAME) + "<br/>" + "Empréstimos:" + getFreq(d.properties.NAME)
+				+ "<br/>" + "% da população:" + getPerc(d.properties.NAME))	
+				.style("left", (d3.event.pageX) + "px")		
+				.style("top", (d3.event.pageY - 28) + "px");
+			}
+			else {
+			    div.transition()	
+				.duration(200)
+				.style("opacity", .9);		
+			    div.html(d.properties.NAME + "<br/>" + "Maus Clientes:" + getFreq(d.properties.NAME)
+				+ "<br/>" + "% de maus clientes:" + getPerc(d.properties.NAME))
+				.style("left", (d3.event.pageX) + "px")
+				.style("top", (d3.event.pageY - 28) + "px");
+			}
 		    })					
 		.on("mouseout", function(d) {		
 		    div.transition()		
@@ -77,7 +110,7 @@ function drawChart(data){
 		// add legend
 		var w = 140, h = 300;
 
-		var key = d3.select("body")
+		var key = d3.select(chart)
 			.append("svg")
 			.attr("width", w)
 			.attr("height", h)
@@ -122,6 +155,7 @@ function drawChart(data){
 		});
 }
 
+//Converts the state abbreviation
 function convertRegion(input) {
     var states = [
         ['Alabama', 'AL'],
