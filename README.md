@@ -19,3 +19,7 @@ Segundo feedback - Gostou bastante do gráfico, porém sugeriu resumir os textos
 Terceiro feedback - Achou a visualização um pouco confusa, sugeriu legendas adicionais no mapa e na paleta de cores explicando do que se trata. 
 
 Quarto feedback - Achou a narrativa boa, no tocante à ligação entre a quantidade de empréstimos e a inadimplência. Porém, sugeriu que os estados tivessem uma identificação para uma consulta dos dados mais direta.
+
+# Resources
+
+Exemplo de mapa dos Estados Americanos: http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922
