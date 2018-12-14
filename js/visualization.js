@@ -19,8 +19,8 @@ function drawChart(data, chart){
 	// Legend variables
 	var minVal = chart == "#chart1" ? 52 : 0;
 	var maxVal = chart == "#chart1" ? 14717 : 2500; 
-	var lowColor = '#afc7ed';
-	var highColor = '#000000';
+	var lowColor = '#eaeff4';
+	var highColor = '#336699';
 
 	//if the Borrower State is the same from GeoJSON, return de frequency
 	function getFreq(state) {
@@ -95,7 +95,7 @@ function drawChart(data, chart){
 			    div.transition()	
 				.duration(200)
 				.style("opacity", .9);		
-			    div.html(d.properties.NAME + "<br/>" + "Maus Clientes:" + getFreq(d.properties.NAME)
+			    div.html("<b>" + d.properties.NAME + "</b>" + "<br/>" + "Maus Clientes:" + getFreq(d.properties.NAME)
 				+ "<br/>" + "% de maus clientes:" + getPerc(d.properties.NAME))
 				.style("left", (d3.event.pageX) + "px")
 				.style("top", (d3.event.pageY - 28) + "px");

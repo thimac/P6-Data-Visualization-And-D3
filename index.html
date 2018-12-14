@@ -2,49 +2,51 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src=js/visualization.js></script>
     <title>Data Visualization</title>
-    <h2 class="headings">Make Effective Data Visualization: Prosper Loan Data</h2>
+    <h2 class="headings">Visualização de Dados: Dados de empréstimos da Prosper</h2>
 
 </head>
 
 <body>
     <div>
-        <p>As visualizações abaixo dão uma visão geral dos empréstimo por Estado Americano realizados pela empresa Prosper. <br>
+        <p>As visualizações abaixo dão uma visão geral dos empréstimos por Estado Americano realizados pela empresa Prosper. <br>
 	   A Prosper é uma empresa de empréstimo baseada em São Francisco - Califórnia que atua em todo território americano.  <br>
-	   Para essa análise foram dados de 111 mil empréstimos realizados entre 2005 e 2014.  Dentro desse aspectos os mapas<br>
+	   Para essa análise foram coletados dados de 111 mil empréstimos realizados entre 2005 e 2014.  Dentro desse aspecto, os mapas<br>
 	   a seguir mostrarão quais os estados que mais pegaram empréstimos e quais os estados que possuem mais inadimplentes.<br><br>
 
-	   O primeiro mapa coroplético nos mostra a quantidade de empréstimo (basta passar o mouse sobre o estado de interesse para <br>
-	   visualizar os dados), conforme a quatidade é mais mais escuro fica o estado, e a porcentagem desses empéstimo em relação à <br>
+	   O primeiro mapa coroplético nos mostra a quantidade de empréstimos (basta passar o mouse sobre o estado de interesse para <br>
+	   visualizar os dados), quanto maior a quatidade mais escuro fica o estado, e a porcentagem desses empréstimo em relação à <br>
 	   população (Senso de 2015) do referido estado. Como é posível perceber os estados mais populosos são os que mais possuem <br> 
-	   empréstismo, no caso, Califórnia e Texas. Porém, se levar em consideração a porcentagem sobre a população, alguns estados <br>
+	   empréstimo, no caso, Califórnia e Texas. Porém, se levar em consideração a porcentagem sobre a população, alguns estados <br>
 	   possuem uma maior quantidade de empréstimos, como Illinois e Georgia. <br>
         </p>
     </div>
 
     <div id="chart1"></div>
     <div class="note">
-        <p>Após analisar os estados que possuem mais empréstimos, é necessário verificar os estados que mais possuem "maus clientes". O conjunto de <br>
+        <p>
+	   <b> Mapa coroplético 1 - Empréstimos realizados por estados (quanto maior a quantidade mais forte a tonalidade) </b><br><br>
+	   Após analisar os estados que possuem mais empréstimos, é necessário verificar os estados que mais possuem "maus clientes". O conjunto de <br>
 	   dados utilizados possui um variável que mostra o status do empréstimo: <i> Cancelled,  Chargedoff, Completed, Current, Defaulted, <br>
 	   FinalPaymentInProgress, PastDue.</i> Para essa análise considera-se um mau pagador os perfis marcados como <i> Chargedoff </i>, que <br>
-	   são clientes que estão com os pagamentos atrasado; e <i> Defaulted </i>, são clientes que não coneguiram honrar seus pagamentes e <br> <br>
+	   são clientes que estão com os pagamentos atrasado; e <i> Defaulted </i>, que são clientes que não coneguiram honrar seus pagamentes e <br> <br>
 	   são marcados como inadimplentes.
 
 	   O segundo mapa coroplético nos mostra essa relação de "maus clientes" por estados. Conforme o número absoluto desses clientes é maior, <br>
  	   mais escuro é o mapa. Desse modo, como é possível perceber, os estados mais populosos, obviamente, são os que mais possuem esse tipo de <br>
 	   cliente. Porém, como é possível perceber ao passar o mouse sobre os estados, a porcentagem de empréstimos marcados dessa forma varia de <br>
-	   acrordo com o estado, onde o estado mais inadimplente é o Maine, como 36,63% de inadimplência; e o menos inadimplente é o Wyoming, com apenas <br>
-	   6,67% de inadimplência. 
+	   acordo com o estado, onde o estado mais inadimplente é o Maine, como 36,63% de inadimplência; e o menos inadimplente é o Wyoming, com apenas <br>
+	   6,67%. 
         </p>
     </div>
 
     <div id="chart2"></div>
     <div class="note">
-        <p></p>
+        <p><b>Mapa coroplético 2 - Número de inadimplentes (quanto maior a quantidade mais forte a tonalidade)</b> </p>
     </div>
     <script type="text/javascript">
 		d3.csv("data/Borrowers_per_State.csv", function(data){
