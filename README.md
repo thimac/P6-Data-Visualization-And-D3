@@ -11,4 +11,11 @@ dois mapas coroplético, pois percebeu-se que era a forma mais didátiva para a 
 - Legendas: Foi adicionado uma paleta de cores em cada mapa onde quanto mais escuro maior o número de empréstimo (primeiro mapa) e de inadimplentes (segundo mapa).
 - Codificação visual: Além do mapa coroplético, foi adicionado um tooltip com informaçes sobre o estado.
 
+# Feedback
+Primeiro feedback - Gostou da visualização, mas sugeriu que eu colocasse no primeiro mapa a população, em vez de colocar somente a porcentagem da mesma.
 
+Segundo feedback - Gostou bastante do gráfico, porém sugeriu resumir os textos, poque normalmente quem visualizará irá direto no mapa, sem ler textos muitos grandes.
+
+Terceiro feedback - Achou a visualização um pouco confusa, sugeriu legendas adicionais no mapa e na paleta de cores explicando do que se trata. 
+
+Quarto feedback - Achou a narrativa boa, no tocante à ligação entre a quantidade de empréstimos e a inadimplência. Porém, sugeriu que os estados tivessem uma identificação para uma consulta dos dados mais direta.
