@@ -20,7 +20,7 @@ TERCEIRO FEEDBACK - "A ideia foi bom, mas achei um tanto confusa a visualizaçã
 - Ações tomadas: Realmente uma legenda em cada mapa ajudaria no entendimento, foi inserida legendas embaixo e, depois da primeira revisão, em cima dos mapas.
 
 QUARTO FEEDBACK - "A visualização ficou boa, fique um pouco perdida porque eu não sei onde ficam os estado nos EUA. A ligação entre os mapas em relação à quantidade de empréstimos e a inadimplência achei legal. Porém, sugeriria que os estados tivessem uma identificação para uma consulta dos dados mais direta. Porque mesmo que o texto mostre que o Maine é o estado que proporcionalmente é o mais inadimplente, Eu não consegui encontrá-lo no mapa."
--Ações tomdas: resolvi não acatar a sugestão de indentificação para cada estado, porque como foi um única pessoa que solicitou achei que o mapa iria ficar mais poluído.
+- Ações tomdas: resolvi não acatar a sugestão de indentificação para cada estado, porque como foi um única pessoa que solicitou achei que o mapa iria ficar mais poluído.
 
 # Resources
 
