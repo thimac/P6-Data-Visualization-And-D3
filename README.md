@@ -10,9 +10,12 @@ A Prosper é uma empresa de empréstimo baseada em São Francisco - Califórnia 
 - Codificação visual: Além do mapa coroplético, foi adicionado um tooltip com informaçes sobre o estado.
 
 # Feedback
-Primeiro feedback - Gostou da visualização, mas sugeriu que eu colocasse no primeiro mapa a população, em vez de colocar somente a porcentagem da mesma.
+Primeiro feedback - "Ficou legal, gostei particulamente das informações divididas pro estado, pra mim ficou claro a mensagem que você quis passar: quais os estados que mais pegam empréstimos e quais os que mais têm problemas com inadimplência. Acho que a escolha de um mapa com diferentes tons de acordo com a quantidade foi bem escolhida, porque nos faz ir direto nos estados "mais importantes" e enxergar diretamente os dados referentes a eles. Um sugestão seria colorar a população no primeiro mapa, porque mostra ao leitor os estados que mais pegam empréstimo proporcionamente."
+- Ações tomadas: foi inserido a proporção em relação à população.
 
-Segundo feedback - Gostou bastante do gráfico, porém sugeriu resumir os textos, poque normalmente quem visualizará irá direto no mapa, sem ler textos muitos grandes. Além disso, sugeriu mudar as cores, deixando o tom mais alto como azul escuro e não preto.
+Segundo feedback - "Gostei dos mapas, te contrataria hehehehe. A visualização " 
+
+Gostou bastante do gráfico, porém sugeriu resumir os textos, poque normalmente quem visualizará irá direto no mapa, sem ler textos muitos grandes. Além disso, sugeriu mudar as cores, deixando o tom mais alto como azul escuro e não preto.
  
 Terceiro feedback - Achou a visualização um pouco confusa, sugeriu legendas adicionais no mapa e na paleta de cores explicando do que se trata. 
 
