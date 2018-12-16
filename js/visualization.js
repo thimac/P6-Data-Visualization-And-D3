@@ -17,8 +17,8 @@ function drawChart(data, chart){
 		   .projection(projection);  // tell path generator to use albersUsa projection
 
 	// Legend variables
-	var minVal = chart == "#chart1" ? 52 : 0;
-	var maxVal = chart == "#chart1" ? 14717 : 2500; 
+	var minVal = chart == '#chart1' ? 52 : 0;
+	var maxVal = chart == '#chart1' ? 14717 : 2500; 
 	var lowColor = '#eaeff4';
 	var highColor = '#336699';
 
@@ -150,7 +150,7 @@ function drawChart(data, chart){
 		key.append("g")
 			.attr("class", "y axis")
 			.attr("transform", "translate(41,10)")
-			.call(yAxis)
+			.call(yAxis);
  
 		});
 }
